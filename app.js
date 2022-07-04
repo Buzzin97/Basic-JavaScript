@@ -1,9 +1,13 @@
  const a = 5;
  const b = 2;
- const myName = "Sejin"
+ let myName = "Sejin"
  
  console.log(a + b);
  console.log(a * b);
  console.log(a / b);
  console.log("hello " + myName);
+
+ myName ="Park Sejin"
+
+ console.log("Your new name is " + myName);
  
