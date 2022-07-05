@@ -1,25 +1,26 @@
     const calculator = {
         add:function(a ,b) {
-            console.log(a + b);
+            return a + b;
         },
         sub:function(a ,b) {
-            console.log(a -b);
+            return a -b;
         },
         div:function(a ,b) {
-            console.log(a / b);
+            return a / b;
         },
         mul:function(a ,b) {
-            console.log(a *b);
+            return a * b;
         },
         squ:function(a ,b) {
-            console.log(a**b);
-        }
+            return a ** b;
+        },
     };
 
-    calculator.add(4, 5);
-    calculator.sub(4, 5);
-    calculator.div(4, 5);
-    calculator.mul(4, 5);
-    calculator.squ(4, 5);
-    
-    
+    const addResult = calculator.add(2, 3);
+    const subResult = calculator.sub(addResult, 3);
+    const mulResult = calculator.div(2, mulResult);
+    const divResult = calculator.mul(divResult, addResult);
+    const squResult = calculator.squ(divResult, subResult);
+
+
+
