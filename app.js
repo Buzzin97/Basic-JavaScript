@@ -1,18 +1,8 @@
-    
-    const player = {
-        name: "nico",
-        points: 10,
-        fat: true,
-    };
+    function sayHello(nameOfPerson, age) {
+        console.log("Hello my name is " + nameOfPerson + " and I'm" + age);
+    }
 
-    console.log(player);
-    console.log(player.name);
-    console.log(player["name"]);
-    
-    console.log(player);
-    player.fat =false;
-    player.lastName ="tomato"
-    player.points = player.points + 15;
-    console.log(player.points);
 
-    
+    sayHello("lynn", 10)
+    sayHello("dal", 23);
+    sayHello("jin", 26)
