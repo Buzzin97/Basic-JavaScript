@@ -1,13 +1,16 @@
- const longinInput = document.querySelector("#login-form input");
- const longinButton = document.querySelector("#login-form button");
+     const loginForm = document.querySelector("#login-form");
+     const loginInput = document.querySelector("#login-form input");
 
- function onLoginBtnClick() {
-    const username = longinInput.value;
-    if(username === ""){
-     alert("Please write your name");
-    } else if(username.length > 15) {
-     alert("Your name is too long.");
-    }
-}
+qw
+     function onLoginSubmit(info) {
+          info.preventDefault();
+          console.log(loginInput.value);
+     }
 
- longinButton.addEventListener("click" , onLoginBtnClick);
+     loginForm.addEventListener("submit", onLoginSubmit);
+ 
+     
+     
+
+     
+
