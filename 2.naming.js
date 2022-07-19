@@ -16,14 +16,14 @@
 let apple;
 let redApple;
 
-// 나쁜예시
+// 나쁜예시 💩
 
 let number = 20;
 
 let audio1;
 let audio2;
 
-// 좋은예시
+// 좋은예시 🌠
 let myAge = 20;
 
 let backgroundAudio;
