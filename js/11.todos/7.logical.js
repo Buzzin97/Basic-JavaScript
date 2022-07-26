@@ -22,4 +22,4 @@ console.log(false || true); // true
 console.log(false || false); // true
 
 console.log(!'text');  // 문자열은 true --> 부정 false
-console.log(!!'text');  // !! 문자열 Boolean값 변환 true 
+console.log(!!'text');  // !! 문자열 Boolean값 변환 true .
