@@ -10,7 +10,7 @@ function calculator(a, b, action) {
     if(a < 0 || b < 0) {
       return;
     }
-  let result = action(a, b);
+  let result = action(a, b); // 호출한 action을 let 변수에 할당
   console.log(result);
   return result;
 }
