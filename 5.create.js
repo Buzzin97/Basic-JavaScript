@@ -19,7 +19,7 @@ function Fruit(name, emoji) {
   this.display = () => {
     console.log(`${this.name}: ${this.emoji}`);
   };
-  return this; // 생력가능
+  return this; // 생략가능
 }
 
 const apple = new Fruit('apple', '🍎');
