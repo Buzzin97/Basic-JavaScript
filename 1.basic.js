@@ -3,7 +3,7 @@
 // 2. 클래스 
 
 // 클래스
-class Fruit{
+class Fruit {
   // 생성자: new 키워드로 객체를 호출되는 함수
   constructor(name, emoji) {
     this.name = name;
