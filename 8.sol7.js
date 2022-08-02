@@ -26,7 +26,7 @@ class FullTimeEmployee extends Employee {
 class PartTimeEmployee extends Employee {
   static PAY_RATE = 8000;
   constructor(name,part,pay) {
-    super(name, part, pay, FullTimeEmployee.PAY_RATE);
+    super(name, part, pay, PartTimeEmployee.PAY_RATE);
   }
 }
 
