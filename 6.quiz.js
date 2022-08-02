@@ -3,13 +3,16 @@
 // Counter 클래스 만들기
 
 class Counter {
-  #value
+  #value  
   constructor(num) {
    if (isNaN(num) || num < 0) {
     this.#value = 0;
    } else {
-    this.# = 
+    this.#value = num; 
    }
+  }
+  add = () => {
+   num++; 
   }
 }
 
