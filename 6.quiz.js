@@ -13,14 +13,17 @@ class Counter {
   }
 
   get value() {
-    return this.#value;
+    return this.#value; // 읽기 전용
   }
 
   add = () => {
-   this.#value++; 
+   this.#value++;  
   }
 }
 
 const counter = new Counter(2);
 counter.add();
+console.log(counter.value);
+
+
 
