@@ -4,7 +4,9 @@
 
 class Counter {
   constructor(num) {
-   
+   if (isNaN(num) || num < 0) {
+    this.#num = 0;
+   }
   }
 }
 
