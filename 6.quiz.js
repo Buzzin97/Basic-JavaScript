@@ -11,8 +11,13 @@ class Counter {
     this.#value = num; 
    }
   }
+
+  get value() {
+    return this.#value;
+  }
+
   add = () => {
-   num++; 
+   this.#value++; 
   }
 }
 
