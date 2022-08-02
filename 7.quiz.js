@@ -4,10 +4,3 @@
 // 정직원은 시간당 10000원
 // 파트타임 직원은 시간당 8000원
 
-function add(a) {
-  if (a < 0) {
-    return;
-  }
-  console.log(a);
-}
-add(-10);
