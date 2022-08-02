@@ -9,4 +9,5 @@ class Counter {
 }
 
 const counter = new Counter(2);
+counter.add();
 
