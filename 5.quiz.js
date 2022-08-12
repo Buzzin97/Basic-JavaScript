@@ -3,18 +3,18 @@
 // input:['🍌','🍓','🍇','🍓']
 // output:['🍌','🥝','🍇','🥝']
 
-function changed(input) {
+function changed(input,from,to) {
   const change = Array.from(input)
   for(let i = 0; i < change.length; i++){
-    if(change[i] === '🍓') {
-      change[i] = '🥝';
+    if(change[i] === from) {
+      change[i] = to;
     }
   }
   return change;
 }
 
 const input = ['🍌','🍓','🍇','🍓'];
-const output = changed(input);
+const output = changed(input,'🍓','🥝');
 console.log(output);
 
 /** 퀴즈2: 배열과 특정한 요소를 전달받아,
