@@ -3,8 +3,19 @@
 // input:['🍌','🍓','🍇','🍓']
 // output:['🍌','🥝','🍇','🥝']
 
+function changed(input) {
+  const change = Array.from(input)
+  for(let i = 0; i < change.length; i++){
+    if(change[i] === '🍓') {
+      change[i] = '🥝';
+    }
+  }
+  return change;
+}
 
-
+const input = ['🍌','🍓','🍇','🍓'];
+const output = changed(input);
+console.log(output);
 
 /** 퀴즈2: 배열과 특정한 요소를 전달받아,
  *  배열안에 그 요소가 몇개나 있는지 카운트 하는 함수 만들기
