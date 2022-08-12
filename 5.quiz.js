@@ -40,3 +40,9 @@ console.log(counter(fruits,'🥝'));
  *  input['🍌','🥝','🍇'], ['🍌','🍓','🍇','🍓']
  *  output ['🍌','🍇']
  */
+
+function match(array1,array2) {
+  let result = [];
+  for(let i = 0; i < array1.length; i++)
+}
+
