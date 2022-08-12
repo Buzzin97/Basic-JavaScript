@@ -48,5 +48,8 @@ function match(array1,array2) {
       result.push(array1[i])
     }
   }
+  return result;
 }
+
+console.log(match(['🍌','🥝','🍇'], ['🍌','🍓','🍇','🍓']));
 
