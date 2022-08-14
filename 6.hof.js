@@ -19,7 +19,7 @@ function rotate(array, action) {
   }
 }
 
-let action = (array) => {console.log(array);}
+let action = (value) => {console.log(value);}
 rotate(['🍌','🍓','🍇','🍓'],action);
 
 // 조건에 맞는(콜백함수) 아이템을 찾을때
