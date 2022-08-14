@@ -16,16 +16,21 @@ console.log(output);
  *  input: ['🍌','🥝','🍇','🥝'], '🥝'
  *  output: 2 
  */
-
- function counter(fruits, item) {
-  let sum = 0;
-  for(let i = 0; i < fruits.length; i++) {
-    if(fruits[i] === item) {
-      sum ++;
-    }
-  }
-  return sum;
+function counter(array,item) {
+  return array.filter(value => value === item).length;
 }
+
+
+// function counter(array, item) {
+//   return array.reduce((count,value) => {
+//     if(value === item) {
+//       count++;
+//     }
+//     return count;
+//   },0)
+// }
+ 
+
 const fruits = ['🍌','🥝','🍇','🥝'];
 console.log(counter(fruits,'🥝'));
 
