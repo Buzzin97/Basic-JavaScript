@@ -3,7 +3,19 @@
 // input:['🍌','🍓','🍇','🍓']
 // output:['🍌','🥝','🍇','🥝']
 
+function changed(input,from,to) {
+  const change = Array.from(input)
+  for(let i = 0; i < change.length; i++){
+    if(change[i] === from) {
+      change[i] = to;
+    }
+  }
+  return change;
+}
 
+const input = ['🍌','🍓','🍇','🍓'];
+const output = changed(input,'🍓','🥝');
+console.log(output);
 
 /** 퀴즈2: 배열과 특정한 요소를 전달받아,
  *  배열안에 그 요소가 몇개나 있는지 카운트 하는 함수 만들기
@@ -11,6 +23,17 @@
  *  output: 2 
  */
 
+ function counter(fruits, item) {
+  let sum = 0;
+  for(let i = 0; i < fruits.length; i++) {
+    if(fruits[i] === item) {
+      sum ++;
+    }
+  }
+  return sum;
+}
+const fruits = ['🍌','🥝','🍇','🥝'];
+console.log(counter(fruits,'🥝'));
 
 
 /** 퀴즈3: 배열1, 배열2 두개의 배열을 전달받아,
@@ -18,6 +41,19 @@
  *  input['🍌','🥝','🍇'], ['🍌','🍓','🍇','🍓']
  *  output ['🍌','🍇']
  */
+
+ function match(array1,array2) {
+  let result = [];
+  for(let i = 0; i < array1.length; i++){
+    if(array2.includes(array1[i])) {
+      result.push(array1[i])
+    }
+  }
+  return result;
+}
+
+console.log(match(['🍌','🥝','🍇'], ['🍌','🍓','🍇','🍓']));
+
 
 
 /** 퀴즈4
