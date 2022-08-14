@@ -2,19 +2,13 @@
 // 단, 주어진 배열을 수정하지 않도록한다.
 // input:['🍌','🍓','🍇','🍓']
 // output:['🍌','🥝','🍇','🥝']
+function replace(array, from, to) {
+  return array.map(item => item === from ? to : from )
+};
 
-function changed(input,from,to) {
-  const change = Array.from(input)
-  for(let i = 0; i < change.length; i++){
-    if(change[i] === from) {
-      change[i] = to;
-    }
-  }
-  return change;
-}
 
 const input = ['🍌','🍓','🍇','🍓'];
-const output = changed(input,'🍓','🥝');
+const output = replace(input,'🍓','🥝');
 console.log(output);
 
 /** 퀴즈2: 배열과 특정한 요소를 전달받아,
