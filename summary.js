@@ -20,3 +20,14 @@ class는 대문자로 시작한다.
   username = undefined;
   result = username || '유저이름이 없습니다.';
   console.log(result);
+
+  // 프로퍼티 접근 법
+  // 마침표 프로퍼티 접근 연산자
+  // 대괄호 프로퍼티 접근 연산자
+
+
+10 in [10, 20, 30] // false
+1 in [10, 20, 30] // true
+//1 in 'hello' // error
+'name' in {'name':'hojun', 'age':10} //true
+'length' in [10, 20, 30]; // true
