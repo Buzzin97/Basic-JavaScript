@@ -31,3 +31,8 @@ class는 대문자로 시작한다.
 //1 in 'hello' // error
 'name' in {'name':'hojun', 'age':10} //true
 'length' in [10, 20, 30]; // true
+
+
+
+let array = Array(100).fill(0).map((value, index)=> value + index)
+console.log(array);
