@@ -12,3 +12,11 @@ class는 대문자로 시작한다.
   할당연산자 +=
   논리 연산자 && || ! 
   &&은 곱 ||는 합 !는 부정 */
+
+  let username = 'sejin';
+  result = username || '유저이름이 없습니다.';
+  console.log(result);
+
+  username = undefined;
+  result = username || '유저이름이 없습니다.';
+  console.log(result);
