@@ -87,3 +87,20 @@ function add({ a = 100, b = 200 }) {
 }
 
 add({b: 300}); // 400
+
+
+// 콜백함수
+function add(x, y) {
+  return x + y;
+}
+
+function mul(x, y) {
+  return x * y;
+}
+
+function cal(a, b){
+  return a(10, 10) + b(10, 10);
+}
+// 위에서 미리 함수를 만들어 놓고
+cal(add, mul); // 여기서 사용한다 call back!
+
