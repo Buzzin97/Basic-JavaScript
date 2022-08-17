@@ -36,3 +36,21 @@ class는 대문자로 시작한다.
 
 let array = Array(100).fill(0).map((value, index)=> value + index)
 console.log(array);
+
+let map = new Map()
+map.set('one', 100)
+map.set('two', 200)
+map.set('three', 300)
+map.set('four', [10, 20])
+map.set(5, [100, 200])
+map.set([1, 2], [100, 200])
+map.get(5)
+
+let human = {
+    name:'sejin',
+    age:26,
+    local:'youngin'
+}
+let sejin = new Map(Object.entries(human))
+console.log(sejin);
+console.log(human);
