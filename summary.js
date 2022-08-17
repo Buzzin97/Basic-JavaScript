@@ -54,3 +54,7 @@ let human = {
 let sejin = new Map(Object.entries(human))
 console.log(sejin);
 console.log(human);
+
+//함수 표현식과 함수 선언식
+let 함수표현식 = function(){} // 호이스팅 X
+function 함수선언식(){} // 호이스팅 O
