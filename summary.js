@@ -58,3 +58,32 @@ console.log(human);
 //함수 표현식과 함수 선언식
 let 함수표현식 = function(){} // 호이스팅 X
 function 함수선언식(){} // 호이스팅 O
+
+// 함수 (선파실아)  선언할때는 파라미터(매개변수) 실제사용은 아규먼트(전달인자)
+function add(x, y){
+  return x + y;
+}
+
+add(3, 5)
+
+function add(a = 100, b = 200) {
+  console.log(a, b);
+  return a + b;
+}
+
+add(10, 20);
+// 30
+add(10);
+// 210
+add();
+// 300
+add(b=300) // a에 입력
+// 500
+add(undefined, 300);
+// 400
+
+function add({ a = 100, b = 200 }) {
+  console.log(a+b);
+}
+
+add({b: 300}); // 400
