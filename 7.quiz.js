@@ -60,3 +60,7 @@ console.log(match(['🍌','🥝','🍇'], ['🍌','🍓','🍇','🍓']));
  *  5이상(보다 큰)의  숫자들의 평균
  */
 const nums = [3, 16, 5, 25, 4, 34, 21];
+
+const result2 = nums.filter((num) => num > 5) // 5이상의 숫자를 필터했다.
+.reduce((avg, num, _, array) => avg + num /array.length , 0) // reduce를 통해서 평균값을 만들었다.
+console.log(result2);
