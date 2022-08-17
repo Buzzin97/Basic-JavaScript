@@ -104,3 +104,38 @@ function cal(a, b){
 // 위에서 미리 함수를 만들어 놓고
 cal(add, mul); // 여기서 사용한다 call back!
 
+
+// 클래스와 인스턴스
+// 클래스는 틀(붕어빵 틀 ,템플릿), 인스턴스는 제품(붕어빵)
+class Notice {
+  constructor(title, contents, author){
+      this.title = title
+      this.contents = contents
+      this.author = author
+  }
+  수정하기(title, contents, author){
+      this.title = title
+      this.contents = contents
+      this.author = author
+  }
+}
+
+dataBase = []
+게시물1 = new Notice('제목1', '내용1', '저자1')
+dataBase.push(게시물1)
+게시물2 = new Notice('제목2', '내용2', '저자2')
+dataBase.push(게시물2)
+게시물3 = new Notice('제목3', '내용3', '저자3')
+dataBase.push(게시물3)
+
+dataBase.forEach(d => {
+  제목 = document.createElement('h1')
+  제목.textContent = d.title
+  내용 = document.createElement('p')
+  내용.textContent = d.contents
+  저자 = document.createElement('p')
+  저자.textContent = d.author
+  document.body.append(제목)
+  document.body.append(내용)
+  document.body.append(저자)
+})
