@@ -4,7 +4,15 @@
 // 0, 2, 4, 6 ...., 18
 
 const multiple = {
-  [Symbol.iterator]() {}
+  [Symbol.iterator]() {
+    const max = 10;
+    let num = 0;
+    return {
+      next() {
+        return{value: num++ *2, done: num > max };
+      }
+    }
+  },
 };
 for (const num of multiple) {
   console.log(num);
