@@ -17,3 +17,14 @@ for(const item in obj) { // 객체는 이터러블이 아니다! error가 나온
 }
 
 array.values() // for of 에서 사용가능하다. key entries ....
+
+const iterator = array.values();
+while(true) {
+  const item = iterator.next();
+  if (item.done) break; // iterator(item).next().done이 true이면 break 해준다.
+  console.log(item.value); // false일 경우 value 출력
+}
+ console.log(iterator.next().value); // value값과 done 값이 있다. 
+ console.log(iterator.next().value); 
+ console.log(iterator.next().value); 
+ console.log(iterator.next().done); // 반복이 끝나면 done 값이 true이다.
