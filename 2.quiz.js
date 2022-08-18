@@ -4,9 +4,7 @@
 // 0, 2, 4, 6 ...., 18
 
 const multiple = {
-  [Symbol.iterator]() {
-    
-  }
+  [Symbol.iterator]() {}
 };
 for (const num of multiple) {
   console.log(num);
