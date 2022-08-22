@@ -27,6 +27,12 @@ console.log(arr);
 arr = [...fruits1, 'k', ...fruits2];  // Spread 연산자를 사용해서 배열을 합했다.  쫘악 펼침
 console.log(arr);
 
+const a = ['1' , '2']
+const b = ['3' , '4']
+let arr2 = [...a, ...b]; // 중간에 추가로 넣을 수  있다. concat과는 다른 장점이 있다.
+console.log(arr2);
+
+
 // Object
 const sejin = {name: 'Sejin', age: 20, home: {address: 'home'}};
 const updated = {
