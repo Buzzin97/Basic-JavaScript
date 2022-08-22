@@ -7,7 +7,7 @@ const prop = {
   },
 };
 
-function changeColor() {
+function changeColor({styles: { color } }) {
   console.log(color);
 }
 changeColor(prop);
