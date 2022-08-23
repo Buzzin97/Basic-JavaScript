@@ -19,7 +19,7 @@ const k1 = Symbol.for('key');
 const k2 = Symbol.for('key');
 console.log(k1 === k2);
 
-console.log(Symbol.keyFor(k1));
+console.log(Symbol.keyFor(k1)); // keyFor는 global symbol의 key 값을 반환해준다.
 console.log(Symbol.keyFor(key3));
 
 const obj = { [k1]: 'Hello', [Symbol('key')]:1 };
