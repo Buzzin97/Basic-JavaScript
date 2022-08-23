@@ -18,11 +18,23 @@ console.log(key3 === key4);
 const k1 = Symbol.for('key');
 const k2 = Symbol.for('key');
 console.log(k1 === k2);
+// key의 값이 'key'이기 때문에 할당된 변수를 비교했을때 true가 반환된다.
 
-console.log(Symbol.keyFor(k1));
+console.log(Symbol.keyFor(k1)); // keyFor는 global symbol의 key 값을 반환해준다.
 console.log(Symbol.keyFor(key3));
 
 const obj = { [k1]: 'Hello', [Symbol('key')]:1 };
 console.log(obj);
 console.log(obj[k1]);
 console.log(obj[Symbol['key']]);
+
+// 전역 심벌 레지스트리 (Global Symbol Registry) 와  (Symbol)의 차이점
+/**
+ * Symbol('a')는 심볼의 'a'의 값이 parameter로 설정된다. 보통 설명을 다는 주석입니다.
+ * 따라서  Symbol 값이 유일한 value값이 된다. cosnt one = Sybol("a")  변수 one에 유일한 Symbol value가 저장된다.
+ * 
+ * Symbol.for 는 Global Symbol Registry에 저장된다.
+ * Symbol('a')의 'a'값은 key값이 된다. 
+ * 'a' : Symbol('a') 
+ * 
+ */
