@@ -19,3 +19,32 @@ function getOrange() {
 }
 
 // 바나나와 사과를 같이 가지고 오기
+
+// getBanana()
+// .then((banana) =>
+//  getApple()
+//  .then(apple => {
+//   return [banana, apple]
+//  })
+// ).then(console.log);
+
+getBanana()
+  .then((banana) =>
+    getApple()
+      .then((apple) => [banana, apple])
+      )
+      .then(console.log)
+
+// Promise.all 병렬적으로 한번에 모든 Promise들 실행!
+Promise.all([getBanana(), getApple()]) //
+ .then(fruits => console.log('all',fruits));
+
+// Promise.race 주어진 Promise중에 제일 빨리 수행된것이 이김!
+Promise.race([getBanana(), getApple()])
+  .then(fruit => console.log('race', fruit))
+
+
+// Promise.allSettled  실패한(error) 값까지 호출하게 된다.
+Promise.allSettled([getBanana(), getApple(), getOrange()]) //
+ .then((fruits) => console.log('all-settled',fruits))
+ .catch(console.log);
