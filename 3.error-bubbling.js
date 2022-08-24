@@ -4,7 +4,12 @@ function a() {
 }
 
 function b() {
-  a();
+  try {
+    a();
+  } catch (error) {
+    console.log('생각해보니깐 이 에러는 내가 핸들링 할 수 없을 것 같군!');
+    throw error;
+  }
 }
 
 function c() {
@@ -12,7 +17,8 @@ function c() {
 }
 
 try {
-  c();
+  c(); 
 } catch(error) {
   console.log('Catched');
 }
+console.log('done');
