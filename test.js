@@ -87,7 +87,14 @@ Promise.allSettled([getBanana(),getOrange()])
 .then((f) => console.log('error-all', f))
 .catch(console.log('에러입니다.'))
 
+async function fetchFruits() {
+  const banana = await getBanana();
+  const apple = await getApple();
+  return [banana, apple]
+}
 
+fetchFruits()
+.then((a) => console.log('async', a))
 
 
 
