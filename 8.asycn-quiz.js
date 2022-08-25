@@ -12,11 +12,15 @@ function getChicken() {
 }
 
 
-function makeFriedEgg() {
-  return getChicken()
-  .catch(() => 'chick')
-  .then(fetchEgg)
-  .then(fryEgg);
+async function makeFriedEgg() {
+  let chicken;
+  try {
+    chicken = await getChicken();
+  } catch {
+    chicken = 'chick';
+  }
+  const egg = await fetchEgg(chicken);
+  return fryEgg(egg);
 }
 
 makeFriedEgg().then(console.log);
