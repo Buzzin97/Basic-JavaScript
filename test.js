@@ -97,5 +97,31 @@ fetchFruits()
 .then((a) => console.log('async', a))
 
 
+function a(a) {
+  return Promise.resolve(`${a} => A`)
+}
+
+function b(b) {
+  return Promise.resolve(`${b} => B`)
+}
+
+function getAlpa() {
+  //return Promise.resolve(`ABC => Upper`)
+  return Promise.reject(new Error('what are you talking about'))
+}
+
+async function upperCase() {
+  let upper;
+    try {
+      upper = await getAlpa()
+    } catch {
+      upper = '💕'
+    }
+  const small = await a(upper)
+  return b(small)
+}
+
+upperCase()
+.then(console.log)
 
 
