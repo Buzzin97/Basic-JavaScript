@@ -32,3 +32,19 @@ promiseDelay(2)
 
 console.log(`${'세진'} => 팍`);
 
+function fecthEgg(chicken) {
+  return Promise.resolve(`${chicken} => 🐣`)
+}
+
+function fryEgg(egg) {
+  return Promise.resolve(`${egg} => 🍝`)
+}
+
+function getChicken() {{
+  return Promise.resolve('🌏 => 🐔')
+}}
+
+getChicken()
+.then(fecthEgg)
+.then(fryEgg)
+.then(console.log)
