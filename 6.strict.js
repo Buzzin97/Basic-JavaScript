@@ -11,6 +11,6 @@ function add(x) {
 add(1);
 
 const array = [1, 2, 3];
-for (num of array) {
+for (const num of array) {
   console.log(num);
 }
