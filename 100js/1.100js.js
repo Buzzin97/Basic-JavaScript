@@ -64,12 +64,18 @@ console.log(a+b); // 16이 출력된다.
 
 // 7.
 // 다음 중 변수명으로 사용할 수 없는 것 2개를 고르시오.
+/**
+ *  변수의 식별자로 사용 가능한 기준
+ *  1. 특수기호 (_ $)
+ *  2. 문자열 (단, 예약어는 불가능)
+ *  3. 숫자(단, 첫번째 순서로는 불가능)
+ */
 
 // 1)  age
 // 2)  Age
-// 3)  let
+// 3)  let // 사용불가(예약어)
 // 4)  _age
-// 5)  1age
+// 5)  1age // 사용불가(첫번째 숫자)
 
 
 // 8. 출력값 찾기
@@ -80,8 +86,8 @@ var d = {
   'temperature':36,
   'eyesight':1
 };
-
-console.log(d['weight']);
+// 객체 접근자 . , ['']  key는 문자열과 숫자로 가능
+console.log(d['weight']); // value : 78
 
 // 9. concat을 활용해 출력하기
 // 데이터
@@ -92,7 +98,7 @@ var hour = '11';
 var minute = '34';
 var second = '27';
 
-var result = //빈칸을 채워주세요
+var result = year.concat('/',month,'/',day,' ',hour,':',minute,':',second)
 
 console.log(result);
 
