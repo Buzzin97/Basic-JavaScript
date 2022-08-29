@@ -1,26 +1,35 @@
-// 1.
+// 1. pop을 이용해서 배열 끝에 숫자를 제거
 var nums = [100, 200, 300, 400, 500];
+console.log(nums.pop());
+console.log(nums.pop());
+console.log(nums);
 
-
-// 2.
+// 2.  splice이용하기  splice(인덱스, 인덱스 부터 제거할 개수, 추가 정보)
 var arr = [200, 100, 300];
-//pass
 console.log(arr);
-
+arr.splice(2,0,10000)  
 출력
 [200, 100, 10000, 300]
 
-// 3. 변수의 타입
+
+// 3. 변수의 타입 typeof
+
+// 원시 타입: number , string , boolean, undefined, null
+// 참조 타입 : object
+
 var arr = [100, 200, 300];
 console.log(typeof(arr));
+// 배열은 참조타입이다. object이다.
 
 
 //4.
+let a = 1;
+console.log(typeof(a));
 // 다음 변수 a를 `typeof(a)`로 넣었을 때 출력될 값과의 연결이 알맞지 않은 것은?
 
 // 1)  입력 : a =1,   출력 : number
 
-// 2)  입력 : a = 2.22,   출력 : boolean
+// 2)  입력 : a = 2.22,   출력 : boolean ---> number 타입이다.
 
 // 3)  입력 : a = 'p',   출력 : string
 
@@ -31,22 +40,26 @@ console.log(typeof(arr));
 var a = 10;
 var b = 2;
 
-for(var i=1; i<5; i+=2){
-    a += i;
+for(var i=1; i<5; i+=2){ // i = i + 2
+    a += i; // a = a + i
+    // for문에 두번 돈다. 처음 10 + 1 , 두번째 11 + 3 => 14 출력
 }
 
-console.log(a+b);
+console.log(a+b); // 16이 출력된다.
 
 
 // 6.
 // 다음은 자바스크립트 문법 중에서 False로 취급하는 것들 입니다.
 // 앗, False로 취급하지 않는 것이 하나 있네요! True를 찾아주세요.
 
-// 1)  NaN
-// 2)  1
-// 3)  ""
-// 4)  0
-// 5)  undefined
+// falshy : 0 , ' ' , NaN , false , null , undefined 
+// truthy  
+
+// 1)  NaN // false
+// 2)  1 // true
+// 3)  "" // false
+// 4)  0  // false
+// 5)  undefined // false
 
 
 // 7.
