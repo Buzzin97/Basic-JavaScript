@@ -35,4 +35,7 @@ const tiger1 = new Tiger('어흥', '😨')
 tiger1.printName()
 tiger1.hunt()
 
+console.log(dog1 instanceof Dog);  // 인스턴스인지 확인가능하다 instanceof
+console.log(dog1 instanceof Animal); // True
+console.log(dog1 instanceof Tiger); // false
 // 최신 자바스크립트 타입스크립트는 클래스를 이용한다.
