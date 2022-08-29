@@ -28,3 +28,18 @@ class Counter {
 const counter = new Counter()
 counter.increase()
 counter.increase()
+
+// var와 const의 차이
+
+function loop() {
+  const array = []
+  for(let i = 0; i < 5; i++) {
+    array.push(function() {
+      console.log(i);
+    })
+  }
+  return array
+}
+
+const array = loop()
+array.forEach((func) => func())
