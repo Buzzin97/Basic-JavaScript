@@ -90,3 +90,14 @@ search(2)
  }
 
  printNumber(4)
+ console.clear()
+
+ // 15번 
+ // 입력으로 xxx가 주어지면 "안녕하세요. 저는 xxx입니다" 를 출력하시오!
+
+ printName = (name) => {
+  console.log(`안녕하세요. 저는 ${name}입니다.`);
+ }
+ printName('멍멍이')
+ // const name = prompt()
+ // console.log(`안녕하세요. 저는 ${name}입니다 `)
