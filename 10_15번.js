@@ -22,7 +22,7 @@ const n = 100;
 const sum = (n*(n+1))/2
 console.log(sum);
 
-// 12번 데이터
+// 12번 클래스 만들기
 
 class Wizard {
   constructor(health,mana,armor){
