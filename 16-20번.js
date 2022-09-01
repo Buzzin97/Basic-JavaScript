@@ -7,3 +7,13 @@ change = (a) => {
 }
 change(a)
 
+// 17번 놀이기구 키제한
+// 키를 입력해서 150이넘으면 yes 아니면 no를 출력하시오
+restrict = (tall) => {
+  if (tall < 0 || tall < 150 ) {
+    console.log('no'); 
+  } else {
+    console.log('yes');
+  }
+}
+restrict(170)
