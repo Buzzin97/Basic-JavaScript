@@ -37,3 +37,10 @@ const planet = {
 
 console.log(planet['수성']);
 console.log(planet.수성);
+
+// 27번 객체만들기
+// 이름과 점수가 나오는 객체를 만드시오
+
+//const keys = prompt('이름을 입력하세요').split(' ')
+//const values = prompt('점수를 입력하세요').split(' ')
+const obj = {};
