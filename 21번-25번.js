@@ -7,3 +7,10 @@
 
 // 23번 기본 나눔값과 floor
 // console.log(10/3) ====> 3.3333... Math.floor를 사용하면 3이된다.
+
+// 24번 대문자로 바꿔주세요!
+
+chanage = (string) => {
+  console.log(string.toUpperCase());
+}
+chanage('mary')
