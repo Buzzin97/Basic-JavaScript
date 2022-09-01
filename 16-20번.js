@@ -27,4 +27,7 @@ average = (score) => {
   }
   console.log(Math.floor(sums/score.length));
 }
-average(score)
+average(score) 
+
+
+// 19번
