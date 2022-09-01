@@ -14,3 +14,10 @@ chanage = (string) => {
   console.log(string.toUpperCase());
 }
 chanage('mary')
+
+// 25번 원의 넓이를 구해주세요
+cricleWidth = (n) => {
+ let result = n * n * 3.14
+ return result
+}
+console.log(cricleWidth(5));
