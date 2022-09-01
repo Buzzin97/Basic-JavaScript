@@ -17,3 +17,14 @@ restrict = (tall) => {
   }
 }
 restrict(170)
+
+// 18번 평균점수 구하기 프로그램 (소숫점 자리는 버린다. floor)
+let score = ['70','80','78']
+average = (score) => {
+  let sums  = 0;
+  for(let i = 0; i < score.length; i++) {
+   sums += parseInt(score[i],10);
+  }
+  console.log(Math.floor(sums/score.length));
+}
+average(score)
