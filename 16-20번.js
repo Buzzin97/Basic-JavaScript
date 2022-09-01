@@ -19,7 +19,8 @@ restrict = (tall) => {
 restrict(170)
 
 // 18번 평균점수 구하기 프로그램 (소숫점 자리는 버린다. floor)
-let score = ['70','80','78']
+// const socre = prompt().split(' ')
+let score = ['75', '80', '88']
 average = (score) => {
   let sums  = 0;
   for(let i = 0; i < score.length; i++) {
@@ -30,4 +31,7 @@ average = (score) => {
 average(score) 
 
 
-// 19번
+// 19번 제곱을 구하기
+// 공백으로 구분하여 두 숫자 a와 b가 주어지면, a의 b승을 구하는 프로그램을 만들기
+const num = ["2" , "6"]
+console.log(Math.pow(parseInt(num[0],10),parseInt(num[1],10))); // pow 첫번째것이 밑 , 두번째 것이 지수
