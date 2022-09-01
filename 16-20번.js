@@ -35,3 +35,12 @@ average(score)
 // 공백으로 구분하여 두 숫자 a와 b가 주어지면, a의 b승을 구하는 프로그램을 만들기
 const num = ["2" , "6"]
 console.log(Math.pow(parseInt(num[0],10),parseInt(num[1],10))); // pow 첫번째것이 밑 , 두번째 것이 지수
+
+
+// 20번 몫과 나머지 각각을 출력하지
+const sol = ["7", "2"]
+
+let val = Math.floor(parseInt(sol[0],10)/parseInt(sol[1],10)) // 몫
+let val1 = (parseInt(sol[0],10)%parseInt(sol[1],10)) // 나머지
+
+console.log(val, val1);
