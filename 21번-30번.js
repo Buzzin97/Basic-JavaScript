@@ -70,3 +70,12 @@ let strings = '안녕하세요'
 for(let i = 0; i < strings.length-1; i++) {
   console.log(strings[i],strings[i + 1]);
 }
+
+// 29번 대문자만 지나가세요
+const word = "H"
+
+if(word === word.toUpperCase()) {
+  console.log('yes');
+} else {
+  console.log('no');
+}
