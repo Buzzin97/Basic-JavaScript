@@ -82,5 +82,6 @@ if(word === word.toUpperCase()) {
 
 // 30번 문자열 속 문자찾기 (시작하는 index를 반환하도록 하기)
 const str = 'pineapple is yummy'
+const keyword = 'apple'
 
-console.log(str.indexOf('apple'));
+console.log(str.indexOf(keyword));
