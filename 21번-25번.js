@@ -43,4 +43,25 @@ console.log(planet.수성);
 
 //const keys = prompt('이름을 입력하세요').split(' ')
 //const values = prompt('점수를 입력하세요').split(' ')
-const obj = {};
+
+// node.js  prompt 안되서 함수로 만들었음
+
+let key = function inputKeys(a,b) {
+  key = [a,b]
+  console.log(key); 
+}
+key('세진','진세')
+
+let values = function inputValues(a,b) {
+  values = [a,b]
+}
+values('90', '78')
+
+// 객체 생성 for문으로 안에 넣어줄거임
+let obj = {};
+
+for(let i = 0; i < key.length; i++) {
+  obj[key[i]] = values[i] // 객체 만들기 obj[key] = value // key : value 가 만들어진다.
+  console.log(obj);
+}
+
