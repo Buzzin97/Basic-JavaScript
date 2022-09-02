@@ -79,3 +79,8 @@ if(word === word.toUpperCase()) {
 } else {
   console.log('no');
 }
+
+// 30번 문자열 속 문자찾기 (시작하는 index를 반환하도록 하기)
+const str = 'pineapple is yummy'
+
+console.log(str.indexOf('apple'));
