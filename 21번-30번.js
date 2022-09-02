@@ -65,3 +65,8 @@ for(let i = 0; i < key.length; i++) {
   console.log(obj);
 }
 
+// 28번 2-gram 2개의 연속도 요소를 출력하자
+let strings = '안녕하세요'
+for(let i = 0; i < strings.length-1; i++) {
+  console.log(strings[i],strings[i + 1]);
+}
