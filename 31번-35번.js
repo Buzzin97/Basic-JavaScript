@@ -12,6 +12,7 @@ console.log(arr); // O(1)
 // 32번 문자열 만들기 (문자열을 입력받으면 단어의 갯수를 출력하는 프로그램을 만들기)
 
 const words = '안녕하세요. 저는 한양대학교 건축공학전공 진세입니다.'
+console.log(words.split(" "));
 console.log(words.split(" ").length);
 
 inputWord = (words) => {
@@ -19,3 +20,5 @@ inputWord = (words) => {
   console.log(count);
 }
 inputWord(words)
+
+// 33번 숫자 여러개가 입력되면 역순으로 숫자들을 하나씩 출력해주기
