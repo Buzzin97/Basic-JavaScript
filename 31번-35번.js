@@ -22,3 +22,16 @@ inputWord = (words) => {
 inputWord(words)
 
 // 33번 숫자 여러개가 입력되면 역순으로 숫자들을 하나씩 출력해주기
+const data = '5 6 7 8'
+let result = ' ';
+cha = (data) => {
+  let datas = data.split(" ").reverse()
+  return datas
+} // 문자열을 입력 받아서 split(" ")기준으로 배열 생성 .reverse() 거꾸로 배열을 return한다.
+let solve = cha(data) // 함수의 return값을 저장해줄 변수 선언해줬다.
+console.log(solve); 
+for(let i = 0; i < solve.length; i++) {
+  result += solve[i]+ " "
+}
+// result = result + solve[i] + " " (뒤에 공백) const result는 빈 문자열이다.
+console.log(result);
