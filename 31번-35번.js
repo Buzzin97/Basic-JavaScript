@@ -35,3 +35,17 @@ for(let i = 0; i < solve.length; i++) {
 }
 // result = result + solve[i] + " " (뒤에 공백) const result는 빈 문자열이다.
 console.log(result);
+
+// 34번 sort 구현하기
+const unsorted = '176 156 155 165 93 169';
+let sorted = ' ';
+// sort() 함수 ==> 문자열의 순서대로 정렬을 해준다. (비교해서 정렬)
+// 숫자대로 안해준다... function a b 를 이용해서 a - b가 음수 일때 a가 앞으로 나올수 있게한다.
+sorted = unsorted.split(" ").sort(function(a,b){
+  return a-b;
+}).join(" ")
+
+
+console.log(sorted);
+
+
