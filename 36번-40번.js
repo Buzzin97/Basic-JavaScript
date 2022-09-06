@@ -74,9 +74,21 @@ display(winner, pack[winner])
 
 // 38번 점수가 1등 ~ 3등 학생(중복)한테 사탕을 주자!
 
-const score = [97 ,86 ,75 ,66 ,55 ,97 ,85 ,97 ,97 ,95]
-let theOne = "";
-let candy = {};
+const score = ['97' ,'86' ,'75' ,'66' ,'55' ,'97' ,'85' ,'97' ,'97' ,'95']
 
-score.sort((a,b) => b - a)
+score.sort((a,b) => a - b)
 console.log(score);
+
+let top3 = [];
+let count = 0;
+
+while (top3.length < 3) {
+  let values = score.pop()
+  if(!top3.includes(values)){
+    top3.push(values)
+  }
+  count++
+}
+
+console.log(top3);
+console.log(count);
