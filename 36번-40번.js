@@ -124,3 +124,18 @@ revise = (word, form , to) => {
   console.log(word.split(form).join(to));
 }
 revise(word,'q','e')
+
+// 40번 놀이기구 탑승하기 (최대 몸무게, 놀이기구 제한, 각자의 몸무게)
+const weightLimit = "330";
+const memberCount = "5";
+let counts = 0;
+let totalWeight = 0;
+
+for(let i = 0; i < memberCount; i++) {
+   totalWeight = totalWeight + parseInt("50")
+  if(totalWeight <= weightLimit){
+    counts++
+  }
+}
+console.log(totalWeight);
+console.log(counts);
