@@ -45,3 +45,28 @@ console.log(abc);
 
 console.log(`가장많은 알파벳은 ${abc}이고 총 ${finish[abc]}번 반복되었습니다.`);
 
+
+const def = ['A', 'A', 'B', 'B', 'B' ,'C', 'A' ,'A'] 
+let pack = {};
+let winner = " ";
+
+for(let a in def) {
+  let packing = def[a]
+  if (pack[packing] === undefined) {
+    pack[packing] = 1
+  } else 
+  {
+    pack[packing] += 1
+  }
+}
+console.log(pack);
+winner = Object.keys(pack).reduce(function(a,b){
+  return pack[a] > pack[b] ? a:b
+})
+console.log(winner);
+console.log(pack[winner]);
+
+display = (a,b) => {
+  console.log(`${a}가 총${b}번으로 가장많이 산출되었습니다.`);
+}
+display(winner, pack[winner])
