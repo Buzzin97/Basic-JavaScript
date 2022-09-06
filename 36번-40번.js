@@ -27,7 +27,7 @@ console.log(leader);
 
 console.log(`${leader}(이)가 총 ${results[leader]}표로 반장이 되었습니다. `);
 
-// 37번 복습 가장 많은 알파벳 찾기
+// 37번 복습 가장 많은 알파벳 찾기 + arrow funtion 이용하기
 const stringAbc = ['A', 'A', 'A', 'B', 'B' ,'C'] 
 let abc = " ";
 let finish = {};
@@ -38,14 +38,14 @@ for(let sup in stringAbc) {
 }
 console.log(finish);
 
-abc = Object.keys(finish).reduce(function(a,b){
-  return finish[a] > finish[b] ? a : b
-})
+abc = Object.keys(finish).reduce((a,b) =>
+  finish[a] > finish[b] ? a : b
+)
 console.log(abc);
 
 console.log(`가장많은 알파벳은 ${abc}이고 총 ${finish[abc]}번 반복되었습니다.`);
 
-
+// 37번 if문으로 구현하기 , 입력 함수 만들기
 const def = ['A', 'A', 'B', 'B', 'B' ,'C', 'A' ,'A'] 
 let pack = {};
 let winner = " ";
@@ -70,3 +70,13 @@ display = (a,b) => {
   console.log(`${a}가 총${b}번으로 가장많이 산출되었습니다.`);
 }
 display(winner, pack[winner])
+
+
+// 38번 점수가 1등 ~ 3등 학생(중복)한테 사탕을 주자!
+
+const score = [97 ,86 ,75 ,66 ,55 ,97 ,85 ,97 ,97 ,95]
+let theOne = "";
+let candy = {};
+
+score.sort((a,b) => b - a)
+console.log(score);
