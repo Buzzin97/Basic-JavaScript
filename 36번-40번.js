@@ -116,3 +116,11 @@ const solves = cadidates.reduce((a,b) => {
 console.log(counter);
 console.log(cadidates);
 console.log(solves);
+
+
+// 39번 오타 수정하기 (split 과 join을 이용한다.)
+const word = 'hqllo my namq is sqjin'
+revise = (word, form , to) => {
+  console.log(word.split(form).join(to));
+}
+revise(word,'q','e')
