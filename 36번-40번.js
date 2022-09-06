@@ -27,3 +27,21 @@ console.log(leader);
 
 console.log(`${leader}(이)가 총 ${results[leader]}표로 반장이 되었습니다. `);
 
+// 37번 복습 가장 많은 알파벳 찾기
+const stringAbc = ['A', 'A', 'A', 'B', 'B' ,'C'] 
+let abc = " ";
+let finish = {};
+
+for(let sup in stringAbc) {
+  let inabc = stringAbc[sup]
+  finish[inabc] = finish[inabc] === undefined ? 1 : finish[inabc] += 1;
+}
+console.log(finish);
+
+abc = Object.keys(finish).reduce(function(a,b){
+  return finish[a] > finish[b] ? a : b
+})
+console.log(abc);
+
+console.log(`가장많은 알파벳은 ${abc}이고 총 ${finish[abc]}번 반복되었습니다.`);
+
