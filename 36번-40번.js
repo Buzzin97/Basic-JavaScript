@@ -75,6 +75,7 @@ display(winner, pack[winner])
 // 38번 점수가 1등 ~ 3등 학생(중복)한테 사탕을 주자!
 
 const score = ['97' ,'86' ,'75' ,'66' ,'55' ,'97' ,'85' ,'97' ,'97' ,'95']
+const scores = ['97' ,'86' ,'75' ,'66' ,'55' ,'97' ,'85' ,'75' ,'97' ,'95']
 
 score.sort((a,b) => a - b)
 console.log(score);
@@ -92,3 +93,26 @@ while (top3.length < 3) {
 
 console.log(top3);
 console.log(count);
+
+// 38번 다른 풀이
+
+// 해시로 카운트 하기  key값은 점수 , 값은 학생 수
+const counter = scores.reduce((a,b) => {
+  a[b] = a[b] ? a[b]+= 1 : 1;
+  return a
+},{})
+
+// 키값으로 3등까지 뽑기
+const cadidates = Object.keys(counter)
+.sort((a,b) => b - a)
+.slice(0,3)
+
+// 3등까지의 key값을 합산해준다.
+const solves = cadidates.reduce((a,b) => {
+  a += counter[b]
+  return a;
+},0)
+
+console.log(counter);
+console.log(cadidates);
+console.log(solves);
