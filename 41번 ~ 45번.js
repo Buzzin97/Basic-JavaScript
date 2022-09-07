@@ -16,3 +16,15 @@ console.log(`${n}은 소수입니다.`);
 
 primeFun(prime)
 
+// 42번 요일 구하기  2022년 x월 x일의 요일 구하기
+const day = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+const date = 21;
+const month = 12;
+
+solveDay = (a,b) => {
+  const nowDay = new Date(`2022-${a}-${b}`)
+  console.log(day[nowDay.getDay()]);
+}
+
+solveDay(month,date)
+
