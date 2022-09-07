@@ -75,7 +75,6 @@ display(winner, pack[winner])
 // 38번 점수가 1등 ~ 3등 학생(중복)한테 사탕을 주자!
 
 const score = ['97' ,'86' ,'75' ,'66' ,'55' ,'97' ,'85' ,'97' ,'97' ,'95']
-const scores = ['97' ,'86' ,'75' ,'66' ,'55' ,'97' ,'85' ,'75' ,'97' ,'95']
 
 score.sort((a,b) => a - b)
 console.log(score);
@@ -95,10 +94,11 @@ console.log(top3);
 console.log(count);
 
 // 38번 다른 풀이
+const scores = ['97' ,'86' ,'75' ,'66' ,'55' ,'97' ,'85' ,'75' ,'97' ,'95']
 
 // 해시로 카운트 하기  key값은 점수 , 값은 학생 수
 const counter = scores.reduce((a,b) => {
-  a[b] = a[b] ? a[b]+= 1 : 1;
+  a[b] = a[b] === undefined ? 1 : a[b] += 1; // a[b] = a[b] ? ++a[b] : 1 로도 쓸수 있다.
   return a
 },{})
 
@@ -109,10 +109,13 @@ const cadidates = Object.keys(counter)
 
 // 3등까지의 key값을 합산해준다.
 const solves = cadidates.reduce((a,b) => {
-  a += counter[b]
+  console.log("why" + counter[b]);
+  a += counter[b] // reduce 초기값 0으로 설정 0 = 0 + counter[b] ... 3 + 1 + 1 = 5가 a에 누적된다. reduce(a(누적값))
+  // cadidates['97','95','86']를 인자로 받는다. counter객체의 key로 받는다. counter[97] : 3 reduce로 순회하여 함수 실행한다.
   return a;
 },0)
 
+console.log(counter[55]);
 console.log(counter);
 console.log(cadidates);
 console.log(solves);
