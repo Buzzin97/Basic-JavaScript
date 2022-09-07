@@ -48,3 +48,14 @@ return a = a + Number(b)
 },0)
 console.log(sum);
 
+
+// 44번 10으로 계속 나눈 나머지가 그 합계인 것을 이용
+let oums = '12345'
+let sumSum = 0;
+while(oums) {
+  sumSum += oums%10  // 0 + 5 , 5 + 4 , 9 + 3 , 12 + 2 , 14 + 1
+  oums = Math.floor(oums/10)  // 1234 .. 123 .. 12 .. 1..
+}
+
+console.log(sumSum);
+
