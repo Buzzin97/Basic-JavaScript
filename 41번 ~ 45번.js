@@ -28,3 +28,14 @@ solveDay = (a,b) => {
 
 solveDay(month,date)
 
+
+// 43번 10진수를 2진수로 만들기
+let dec = 160;
+const arr = [];
+
+while(dec) {
+  arr.push(dec%2)  // 빈 배열에 2로 나눈 나머지값을 push 해준다.
+  dec = Math.floor(dec / 2) // while 반복동안 계속 2로 나누어줘서 dec에 다시 저장해준다.
+}
+
+console.log(arr.reverse().join(''));
