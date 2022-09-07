@@ -59,3 +59,8 @@ while(oums) {
 
 console.log(sumSum);
 
+// 45번 getTime()을 이용해서 올해년도 구하기 getTime은 1970년 1월 1일 기준이다.
+const d = new Date()
+let nowD = d.getTime();
+nowD = Math.floor(nowD/(3600*24*365*1000)+1970)
+console.log(nowD);
