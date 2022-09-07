@@ -37,5 +37,6 @@ while(dec) {
   arr.push(dec%2)  // 빈 배열에 2로 나눈 나머지값을 push 해준다.
   dec = Math.floor(dec / 2) // while 반복동안 계속 2로 나누어줘서 dec에 다시 저장해준다.
 }
-
+let aaa = 160;
 console.log(arr.reverse().join(''));
+console.log(aaa.toString(2));
