@@ -40,3 +40,11 @@ while(dec) {
 let aaa = 160;
 console.log(arr.reverse().join(''));
 console.log(aaa.toString(2));
+
+// 44번 각 자리의 숫자를 더하기
+const nums = '1234';
+let sum = nums.split("").reduce((a,b) => {
+return a = a + Number(b)
+},0)
+console.log(sum);
+
