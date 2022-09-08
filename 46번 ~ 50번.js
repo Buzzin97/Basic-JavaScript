@@ -46,3 +46,15 @@ for(let i = 0; i < str.length; i++) {
   }
 }
 console.log(array.join(""));
+
+// 49번 최댁값 구하기
+
+let numbers = prompt('10개의 숫자를 입력하세요').split(' ').map((n) => {
+  return parseInt(n, 10);
+});
+
+numbers.sort((a, b) => {
+  return b-a;
+});
+
+console.log(numbers[0]);
