@@ -47,14 +47,14 @@ for(let i = 0; i < str.length; i++) {
 }
 console.log(array.join(""));
 
-// 49번 최댁값 구하기
+// 49번 최대값 구하기
 
-let numbers = prompt('10개의 숫자를 입력하세요').split(' ').map((n) => {
+let numbers = '1 2 3 4 5 6 7 8 9 10'.split(' ').map((n) => {
   return parseInt(n, 10);
-});
+}); // 문자열을 숫자로 맵핑했음
 
 numbers.sort((a, b) => {
   return b-a;
-});
+}); // 오름차순정렬 => 배열
 
-console.log(numbers[0]);
+console.log(numbers[0]);  // 배열의 첫번째 요소가 최대값이다.
