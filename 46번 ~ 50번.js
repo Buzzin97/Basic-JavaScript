@@ -33,3 +33,16 @@ for(let key in people) {
 }
 console.log(result); // 중복 제거된 객체 
 console.log(result.size);
+
+// 48번 대소문자 바꿔주기
+const str = 'AAABBBcccddd'
+let array = [];
+
+for(let i = 0; i < str.length; i++) {
+  if(str[i] === str[i].toLowerCase()) {
+    array.push(str[i].toUpperCase())
+  } else {
+    array.push(str[i].toUpperCase())
+  }
+}
+console.log(array.join(""));
