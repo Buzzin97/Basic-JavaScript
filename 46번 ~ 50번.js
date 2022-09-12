@@ -52,9 +52,18 @@ console.log(array.join(""));
 let numbers = '1 2 3 4 5 6 7 8 9 10'.split(' ').map((n) => {
   return parseInt(n, 10);
 }); // 문자열을 숫자로 맵핑했음
-
 numbers.sort((a, b) => {
   return b-a;
 }); // 오름차순정렬 => 배열
 
 console.log(numbers[0]);  // 배열의 첫번째 요소가 최대값이다.
+
+// 49 sort함수 최솟값 구하기 & parseInt mapping
+let number = '1 3 5 7 9'.split(' ').map((n) => {
+  return parseInt(n,10);
+})
+let results = number.sort((a,b) => {
+  return a - b;
+})
+console.log(number);
+console.log(results[0]);
