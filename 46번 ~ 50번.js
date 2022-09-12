@@ -58,7 +58,7 @@ numbers.sort((a, b) => {
 
 console.log(numbers[0]);  // 배열의 첫번째 요소가 최대값이다.
 
-// 49 sort함수 최솟값 구하기 & parseInt mapping
+// 49번 - 1  sort함수 최솟값 구하기 & parseInt mapping
 let number = '1 3 5 7 9'.split(' ').map((n) => {
   return parseInt(n,10);
 })
@@ -67,3 +67,26 @@ let results = number.sort((a,b) => {
 })
 console.log(number);
 console.log(results[0]);
+
+// 50번. 버블정렬 구현하기
+function bubble(cy) {
+  let oioioq = cy.slice(); 
+
+  for (let i = 0; i < oioioq.length - 1; i++) {
+    for (let j =0; j < oioioq.length - i - 1; j++) {
+      if (oioioq[j] > oioioq[j + 1]) {
+         let values = oioioq[j]
+         oioioq[j] = oioioq[j + 1]
+         oioioq[j+1] = values
+      }
+    }
+  }
+  return oioioq;
+}
+
+const items = '1 5 2 4 3 8'.split(' ').map((n) => {
+  return parseInt(n, 10);
+}); // 문자열 => 배열 => 숫라로 반환
+
+console.log(bubble(items));
+
