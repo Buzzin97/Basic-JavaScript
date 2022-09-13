@@ -78,9 +78,9 @@ function bubble(itema) {
          let values = formula[j]
          formula[j] = formula[j + 1]
          formula[j+1] = values
-      }
+        }
+     }
     }
-  }
   return formula;
 }
 
