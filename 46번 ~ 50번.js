@@ -69,24 +69,24 @@ console.log(number);
 console.log(results[0]);
 
 // 50번. 버블정렬 구현하기
-function bubble(cy) {
-  let oioioq = cy.slice(); 
+function bubble(itema) {
+  let formula = itema.slice(); 
 
-  for (let i = 0; i < oioioq.length - 1; i++) {
-    for (let j =0; j < oioioq.length - i - 1; j++) {
-      if (oioioq[j] > oioioq[j + 1]) {
-         let values = oioioq[j]
-         oioioq[j] = oioioq[j + 1]
-         oioioq[j+1] = values
+  for (let i = 0; i < formula.length - 1; i++) {
+    for (let j =0; j < formula.length - i - 1; j++) {
+      if  (formula[j] > formula[j + 1]) {
+         let values = formula[j]
+         formula[j] = formula[j + 1]
+         formula[j+1] = values
       }
     }
   }
-  return oioioq;
+  return formula;
 }
 
-const items = '1 5 2 4 3 8'.split(' ').map((n) => {
+const itema = '1 5 2 4 3 8'.split(' ').map((n) => {
   return parseInt(n, 10);
-}); // 문자열 => 배열 => 숫라로 반환
+}); // 문자열 => 배열 => 숫자로 반환
 
-console.log(bubble(items));
+console.log(bubble(itema));
 
